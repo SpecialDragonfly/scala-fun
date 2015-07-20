@@ -44,7 +44,7 @@ object Exercises {
   // Elegance: 0.5 marks
   // Total: 4
   def length[A](l: List[A]): Int = {
-    this.sum(l.map(x => l.count(_ == x))) // Not allowed to use map.
+    succ(l.indices.last)
   }
 
   // Exercise 4
