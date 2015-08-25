@@ -53,7 +53,12 @@ object Exercises {
   // Performance: 1.0 mark
   // Elegance: 1.5 marks
   // Total: 7
-  def map[A, B](x: List[A], f: A => B): List[B] = error("todo")
+  def map[A, B](x: List[A], f: A => B): List[B] = {
+    x match {
+        case Nil => Nil
+        case h::t => f(h) :: map(t, f)
+    }
+  }
 
   // Exercise 5
   // Relative Difficulty: 5
