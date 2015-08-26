@@ -124,4 +124,12 @@ object Exercises {
   // Performance: 2.5 marks
   // Elegance: 2.5 marks
   // Total: 10
-  def reverse[A](x: List[A]): List[A] = error("todo")
+  def reverse[A](x: List[A]): List[A] = {
+    def rev[A](l:List[A], revList:List[A]):List[A] = {
+      l match {
+        case h::t => rev(t, h::revList)
+        case Nil => revList
+      }
+    }
+    rev(x, Nil)
+  }
