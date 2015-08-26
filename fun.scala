@@ -66,7 +66,18 @@ object Exercises {
   // Performance: 1.5 marks
   // Elegance: 1 mark
   // Total: 7
-  def filter[A](x: List[A], f: A => Boolean): List[A] = error("todo")
+  def filter[A](x: List[A], f: A => Boolean): List[A] = {
+    x match {
+        case Nil => Nil
+        case h::t => {
+            if (f(h)) {
+                h :: filter(t,f)
+            } else {
+                filter(t,f)
+            }
+        }
+    }
+  }
 
   // Exercise 6
   // Relative Difficulty: 5
