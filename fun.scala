@@ -114,7 +114,9 @@ object Exercises {
   // Performance: 3.0 marks
   // Elegance: 2.5 marks
   // Total: 9
-  def maximum(x: List[Int]): Int = error("todo")
+  def maximum(x: List[Int]): Int = {
+    x.max
+  }
 
   // Exercise 10
   // Relative Difficulty: 10
@@ -123,4 +125,3 @@ object Exercises {
   // Elegance: 2.5 marks
   // Total: 10
   def reverse[A](x: List[A]): List[A] = error("todo")
-}
