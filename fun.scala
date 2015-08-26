@@ -85,7 +85,12 @@ object Exercises {
   // Performance: 1.5 marks
   // Elegance: 1 mark
   // Total: 7
-  def append[A](x: List[A], y: List[A]): List[A] = error("todo")
+  def append[A](x: List[A], y: List[A]): List[A] = {
+    x match {
+      case Nil => y
+      case h :: t => h :: append(t, y)
+    }
+  }
 
   // Exercise 7
   // Relative Difficulty: 5
